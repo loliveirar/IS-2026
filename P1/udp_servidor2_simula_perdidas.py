@@ -1,3 +1,4 @@
+import random
 import socket
 from sys import argv 
 
@@ -12,5 +13,7 @@ s.bind(("", port))
 
 while True:
     data, addr = s.recvfrom(1024)
-    print("Mensaje recibido de {}: {}".format(addr, data.decode()))
-
+    num = random.randint(0,1)
+    if num == 1:
+        #simulamos que el mensaje se ha recibido correctamente
+        print("Mensaje recibido de {}: {}".format(addr, data.decode()))

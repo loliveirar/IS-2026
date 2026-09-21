@@ -9,7 +9,11 @@ port = int(argv[2])
 
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 linea=""
+contador = 0
 while linea!="FIN":
+    contador += 1
     linea = input("Ingrese un mensaje (o 'FIN' para terminar): ")
-    s.sendto(linea.encode(), (host, port))
+    s.sendto((str(contador) + ":" + linea).encode(), (host, port))
+
+    
     
