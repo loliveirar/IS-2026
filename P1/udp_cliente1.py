@@ -13,3 +13,5 @@ while linea!="FIN":
     linea = input("Ingrese un mensaje (o 'FIN' para terminar): ")
     s.sendto(linea.encode(), (host, port))
     
+
+# ejercicio 1
