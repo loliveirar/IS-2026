@@ -13,5 +13,3 @@ s.bind(("", port))
 while True:
     data, addr = s.recvfrom(1024)
     print("Mensaje recibido de {}: {}".format(addr, data.decode()))
-
-# servidor
